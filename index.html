@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=1024, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
+      window.beginDrawing = function() {
+      };
+      $(function() {
+        var $canvas = $("#paint-here");
+        $canvas.on("touchstart", window.beginDrawing);
+      });
     </script>
   <body>
-    <canvas id="paint-here" width="320" height="160"></canvas>
+    <canvas id="paint-here" width="1024" height="1024"></canvas>
